@@ -15,18 +15,24 @@ public class CreditCardInavlidToValid {
         return power;
     }
 
+    public static int convertHelper(int num){
+        int result = 1;
+
+        while(num !=0){
+            int calcValue = (num %100)/10 *2;
+            int replacedVal = calcValue >= 10 ? (calcValue/10 + calcValue/10)
+                    : calcValue;
+            num /= 10;
+            result += result *powerFunction(num)
+        }
+    }
+
     public static int numberValidator(int num){
          int digitsSum = 0;
         int powerValue = powerFunction(num);
         int firstDigit = num/powerValue;
+        powerValue
 
-        while(num !=0){
-            num /= 10;
-            int calcValue = (num %100)/10 *2;
-            int replacedVal = calcValue >= 10 ? (calcValue/10 + calcValue/10)
-                    : calcValue;
-
-        }
         if(num%10 == 0) return num;
         else{
 
